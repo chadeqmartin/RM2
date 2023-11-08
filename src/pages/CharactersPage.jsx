@@ -57,7 +57,8 @@ const CharactersPage = () => {
         
        <div className="card-grid">
         {characters.map((character, idx) => (
-            <CharCard 
+            <div key={idx} className='col-md-4 mb-4'>
+            <CharCard
                 key={idx}
                 id={character.id}
                 name={character.name}
@@ -70,6 +71,7 @@ const CharactersPage = () => {
                 setFavorites={setFavorites}
                 favorites={favorites}
                 />
+                </div>
         ))}
         </div>
         </>
